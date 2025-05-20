@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="game-header">
+    <div class="container">
+      <h1>try staying alive cause ur mom would go absolutley insane trying to figure out where she wnet wrong</h1>
+      <a href="../../index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main class="game-container">
+    <div class="game-controls">
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Score:</span>
+          <span id="score" class="stat-value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">High Score:</span>
+          <span id="highScore" class="stat-value">0</span>
+        </div>
+      </div>
+      
+      <div class="buttons">
+        <button id="pauseBtn" class="btn">
+          <i class="fas fa-pause"></i> Pause
+        </button>
+        <button id="resetBtn" class="btn">
+          <i class="fas fa-redo"></i> Reset
+        </button>
+      </div>
+    </div>
+
+    <div class="game-area">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+      <div id="gameOverMessage" class="game-message hidden">
+        <div class="message-content">
+          <h2><i class="fas fa-skull"></i> Game Over</h2>
+          <p>Your score: <span id="finalScore">0</span></p>
+          <p>High score: <span id="finalHighScore">0</span></p>
+          <div class="message-buttons">
+            <button id="playAgainBtn" class="btn btn-primary">
+              <i class="fas fa-play"></i> Play Again
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="pauseMessage" class="game-message hidden">
+        <div class="message-content">
+          <h2><i class="fas fa-pause"></i> Game Paused</h2>
+          <div class="message-buttons">
+            <button id="resumeBtn" class="btn btn-primary">
+              <i class="fas fa-play"></i> Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-info">
+      <p>Use <kbd>Arrow Keys</kbd> or <kbd>WASD</kbd> to control the snake</p>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
